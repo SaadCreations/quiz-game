@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px; /* Space for branding */
+}
+
+#quiz-box {
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.option.correct {
+    background-color: #9aeabc;
+    border-color: #69c786;
+}
+
+.option.incorrect {
+    background-color: #f8bdb9;
+    border-color: #e57373;
+}
+
+.option.disabled {
+    pointer-events: none;
+}
+
+#next-btn, #restart-btn {
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #5a7df7;
+}
+
+#next-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#result {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+#score-container {
+    text-align: center;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0;
+}
+
+.hide {
+    display: none;
+}
+
+.branding {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
